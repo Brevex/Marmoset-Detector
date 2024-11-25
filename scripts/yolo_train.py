@@ -1,9 +1,11 @@
+# pylint: disable=all
+
 from pathlib import Path
 from ultralytics import YOLO
 
 model = YOLO("yolo11n-seg.pt")
 
-yaml_path = Path("./yolov11_dataset/data.yaml")
+yaml_path = Path("...")
 
 if not yaml_path.exists():
     raise FileNotFoundError(f"data.yaml not found: {yaml_path.absolute()}")
